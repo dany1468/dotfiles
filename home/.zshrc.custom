@@ -23,9 +23,6 @@ PROMPT='%F{magenta}%~%f%b $(git_super_status) %# '
 autoload colors
 colors
 
-# k
-source ~/git/k/k.sh
-
 #########
 # alias
 #########
