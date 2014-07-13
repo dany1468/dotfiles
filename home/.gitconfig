@@ -1,0 +1,43 @@
+[color]
+  ui = auto
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+[user]
+  name = dany1468
+  email = dany1468@gmail.com
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  quotepath = off
+  editor = vim 
+[push]
+  default = tracking
+[pull]
+  rebase = true
+[gui]
+  encoding = utf-8
+[alias]
+  st = status
+  s = status --branc --short
+  co = checkout
+  d = diff
+  br = branch
+  gr = grep --line-number --show-function --color --heading --break
+  logp = log --pretty=oneline
+  logg = log --graph --decorate --oneline
+  l = log --decorate
+  cm = commit -v
+  pr = pull --rebase
+[merge]
+  tool = p4merge
+[mergetool]
+  keepBackup = false
+[mergetool "p4merge"]
+  path = /Applications/p4merge.app/Contents/MacOS/p4merge 
+  keepTemporaries = false
+  trustExitCode = false
+[diff]
+  guitool = kdiff3

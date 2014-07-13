@@ -1,0 +1,62 @@
+export PATH=/usr/local/bin:$PATH
+# rbenv の初期化
+eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
+
+autoload -Uz compinit
+compinit
+autoload zmv
+
+export LANG=ja_JP.UTF-8
+setopt print_eight_bit
+setopt no_flow_control # フローコントロールを無効化
+
+# ヒストリ
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# zsh-git-prompt の設定 
+source ~/git/zsh-git-prompt/zshrc.sh
+PROMPT='%F{magenta}%~%f%b $(git_super_status) %# '
+
+autoload colors
+colors
+
+# k
+source ~/git/k/k.sh
+
+#########
+# alias
+#########
+
+# ls
+alias la="ls -a"
+alias lf="ls -F"
+alias ll="ls -l"
+
+# rails
+alias -g RET="RAILS_ENV=test"
+alias -g RED="RAILS_ENV=development"
+alias -g REP="RAILS_ENV=production"
+
+# tmux
+alias tm='tmux'
+alias tma='tmux attach'
+alias tma0='tmux attach -t 0'
+alias tma1='tmux attach -t 1'
+alias tma2='tmux attach -t 2'
+alias tml='tmux list-sessions'
+
+
+# Bundler Commands
+alias b="bundle"
+alias bi="b install"
+alias be="bundle exec"
+alias bl="bundle list"
+alias bu="bundle update"
+alias bp="bundle package"
+
+
+
+alias hubb="hub browse"
