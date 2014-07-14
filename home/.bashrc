@@ -24,15 +24,6 @@ function gem(){
 
 alias g='git'
 
-alias ddp='cd /Users/dany1468/dev/gees/eight_gees_delivery_date_planner'
-alias bm='cd /Users/dany1468/dev/gees/eight_gees_bc_management'
-alias bd='cd /Users/dany1468/dev/gees/eight_gees_bc_delivery'
-alias toy='cd /Users/dany1468/dev/gees/eight_gees_toys'
-alias e='cd /Users/dany1468/dev/gees/eight_gees_entry'
-alias bw='cd /Users/dany1468/dev/gees/eight_gees_bc_workflow'
-alias mr='cd /Users/dany1468/dev/gees/eight_gees_mid_receiver'
-alias oa='cd /Users/dany1468/dev/gees/eight_gees_ocr_analyzer'
-
 # Bundler Commands
 alias b="bundle"
 alias bi="b install"

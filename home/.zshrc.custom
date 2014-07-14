@@ -1,6 +1,6 @@
 export PATH=/usr/local/bin:$PATH
 # rbenv の初期化
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 eval "$(direnv hook zsh)"
 
 autoload -Uz compinit
@@ -23,6 +23,12 @@ PROMPT='%F{magenta}%~%f%b $(git_super_status) %# '
 autoload colors
 colors
 
+export GOPATH=$HOME/.go
+export PATH=$PATH:$HOME/.go/bin
+
+function p() { peco | while read LINE; do $@ $LINE; done }
+alias e='ghq list -p | p cd'
+alias c='g br | peco | xargs git checkout'
 #########
 # alias
 #########

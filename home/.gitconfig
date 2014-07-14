@@ -41,3 +41,6 @@
   trustExitCode = false
 [diff]
   guitool = kdiff3
+[ghq]
+  root = ~/.ghq
+  root = ~/.go/src
