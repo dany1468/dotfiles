@@ -57,7 +57,7 @@ cask install skitch
 cask install macvim 
 cask install alfred 
 cask install keyremap4macbook 
-cask install atom 
+#cask install atom 
 cask install dash 
 cask install remote-desktop-connection 
 
