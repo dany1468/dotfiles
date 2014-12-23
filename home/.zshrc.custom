@@ -23,12 +23,24 @@ PROMPT='%F{magenta}%~%f%b $(git_super_status) %# '
 autoload colors
 colors
 
+export TERM=xterm-256color
+
+export PATH=$PATH:/Users/sansan_dan/.nodebrew/current/bin
+export JMETER_HOME=$HOME/bin/apache-jmeter-2.12
+alias jmeter='java -jar $JMETER_HOME/bin/ApacheJMeter.jar'
+
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/bin
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 function p() { peco | while read LINE; do $@ $LINE; done }
 alias e='ghq list -p | p cd'
 alias c='g br | peco | xargs git checkout'
+
+export ETCDCTL_PATH=$HOME/.ghq/github.com/coreos/etcdctl/bin
+export PATH=$PATH:$ETCDCTL_PATH
+
+alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 #########
 # alias
 #########

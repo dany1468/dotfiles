@@ -1,0 +1,62 @@
+colorscheme delek
+
+let mapleader = ","
+noremap \ ,
+
+" unite
+" the prefix key.
+nnoremap [unite] <nop>
+nmap <leader>f [unite]
+
+let g:unite_enable_start_insert = 1
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+
+nnoremap [unite]U  :<C-u>Unite -no-split<Space>
+nnoremap [unite]u  :<C-u>Unite<Space>
+nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
+nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
+nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
+nnoremap <silent> [unite]r :<C-u>UniteWithBufferDir file<CR>
+nnoremap <silent> [unite]ur :UniteResume<CR>
+
+nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+nnoremap <silent> [unite]sb :<C-u>UniteResume search-buffer<CR>
+
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+" unite-rails
+nnoremap [unite]x :<C-u>Unite rails/
+nnoremap [unite]xm :<C-u>Unite rails/model<CR>
+nnoremap [unite]xs :<C-u>Unite rails/spec<CR>
+nnoremap [unite]xc :<C-u>Unite rails/controller<CR>
+nnoremap [unite]xv :<C-u>Unite rails/view<CR>
+
+" lightline
+
+set noshowmode
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ 'active': {
+  \   'left': [ ['mode', 'paste'], ['fugitive', 'readonly', 'filename', 'modified'] ]
+  \ },
+  \ 'component_function': {
+  \   'fugitive': 'MyFugitive',
+  \ }
+  \ }
+
+function! MyFugitive()
+  if exists('*fugitive#head')
+    return '* ' . fugitive#head()
+  endif
+  return ''
+endfunction
