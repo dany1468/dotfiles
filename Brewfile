@@ -1,44 +1,46 @@
-tap homebrew/versions|| true
-
 # development
 
 ## brew-cask
-tap phinze/homebrew-cask || true
-install brew-cask || true
-install openssl || true
-install readline || true
-install libyaml || true
-install autoconf || true
-install ctags || true
-install wget || true
+tap caskroom/cask
+install brew-cask
+
+tap rcmdnk/file
+install brew-file
+
+install openssl
+install readline
+install libyaml
+install autoconf
+install ctags
+install wget
 
 ## ruby
-install rbenv || true
-install ruby-build || true
+install rbenv
+install ruby-build
 
 ## go
-install go || true
+install go
 
 ## node
-install nodebrew || true
+install nodebrew
 
 ## mysql
-install mysql || true
+install mysql
 
 ## postgresql
-install postgresql || true
+install postgresql
 
 ## redis
-install redis || true
-install phantomjs || true
-install imagemagick || true
+install redis
+install phantomjs
+install imagemagick
 
 ## virtual
-cask install virtualbox || true
-cask install vagrant || true
+cask install virtualbox
+cask install vagrant
 
 # other
-install heroku-toolbelt || true
+install heroku-toolbelt
 
 ## security
 cask install clamxav
@@ -46,46 +48,46 @@ cask install clamxav
 # personal
 
 ## general
-cask install google-chrome || true
-cask install firefox || true
-cask install kobito || true
-cask install skype || true
-cask install dropbox || true
-cask install skitch || true
-cask install macvim || true
-cask install alfred || true
-cask install keyremap4macbook || true
-cask install atom || true
-cask install dash || true
-cask install remote-desktop-connection || true
+cask install google-chrome
+cask install firefox
+cask install kobito 
+cask install skype 
+cask install dropbox 
+cask install skitch 
+cask install macvim 
+cask install alfred 
+cask install keyremap4macbook 
+cask install atom 
+cask install dash 
+cask install remote-desktop-connection 
 
 ## dev
-cask install iterm2 || true
-install tmux || true
+cask install iterm2 
+install tmux 
 install reattach-to-user-namespace
-install gist || true
-install mongodb || true
-install etcd || true
-install ansible || true
-install hubflow || true
-install boot2docker || true
-install osxfuse || true
-install siege || true
+install gist 
+install mongodb 
+install etcd 
+install ansible 
+install hubflow 
+install boot2docker 
+install osxfuse 
+install siege 
 
-#install intellij-idea || true
+#install intellij-idea 
 
-install tig || true
-install hub || true
-install ag || true
-install jq || true
+install tig 
+install hub 
+install ag 
+install jq 
 
-#tap motemen/ghq || true
-#tap homebrew/dupes || true
-#install ghq || true
+#tap motemen/ghq 
+#tap homebrew/dupes 
+#install ghq 
 
-install direnv || true
+install direnv 
 
 tap peco/peco
-install peco || true
+install peco 
 
 cleanup
