@@ -1,93 +1,68 @@
-# development
 
-## brew-cask
+# tap repositories and their packages
+
+## caskroom/cask
 tap caskroom/cask
 install brew-cask
+cask install alfred
+cask install clamxav
+cask install dash
+cask install dropbox
+cask install firefox
+cask install google-chrome
+cask install iterm2
+cask install kobito
+cask install macvim
+cask install remote-desktop-connection
+cask install skitch
+cask install skype
+cask install vagrant
+cask install virtualbox
 
+## rcmdnk/file
 tap rcmdnk/file
 install brew-file
 
-install openssl
-install readline
-install libyaml
+## peco/peco
+tap peco/peco
+install peco
+
+# Other Homebrew packages
+install ag
+install ansible
 install autoconf
+install boot2docker
 install ctags
+install direnv
+install etcd
+install gist
+install go
+install heroku-toolbelt
+install hub
+install hubflow
+install imagemagick
+install jq
+install libyaml
+install lua
+install mongodb
+install mysql
+install nodebrew
+install openssl
+install osxfuse
+install phantomjs
+install postgresql
+install rbenv
+install readline
+install reattach-to-user-namespace
+install redis
+install ruby-build
+install siege
+install tig
+install tmux
 install wget
 
-## ruby
-install rbenv
-install ruby-build
+# Cask applications
+cask install keyremap4macbook
 
-## go
-install go
-
-## node
-install nodebrew
-
-## mysql
-install mysql
-
-## postgresql
-install postgresql
-
-## redis
-install redis
-install phantomjs
-install imagemagick
-
-## virtual
-cask install virtualbox
-cask install vagrant
-
-# other
-install heroku-toolbelt
-
-## security
-cask install clamxav
-
-# personal
-
-## general
-cask install google-chrome
-cask install firefox
-cask install kobito 
-cask install skype 
-cask install dropbox 
-cask install skitch 
-cask install macvim 
-cask install alfred 
-cask install keyremap4macbook 
-#cask install atom 
-cask install dash 
-cask install remote-desktop-connection 
-
-## dev
-cask install iterm2 
-install tmux 
-install reattach-to-user-namespace
-install gist 
-install mongodb 
-install etcd 
-install ansible 
-install hubflow 
-install boot2docker 
-install osxfuse 
-install siege 
-
-#install intellij-idea 
-
-install tig 
-install hub 
-install ag 
-install jq 
-
-#tap motemen/ghq 
-#tap homebrew/dupes 
-#install ghq 
-
-install direnv 
-
-tap peco/peco
-install peco 
-
+# Other commands
 cleanup
