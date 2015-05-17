@@ -62,8 +62,5 @@ install tig
 install tmux
 install wget
 
-# Cask applications
-cask install keyremap4macbook
-
 # Other commands
 cleanup
