@@ -35,6 +35,7 @@ install boot2docker
 install ctags
 install direnv
 install etcd
+install fish
 install gist
 install go
 install heroku-toolbelt
