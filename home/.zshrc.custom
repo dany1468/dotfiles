@@ -2,6 +2,15 @@ export PATH=/usr/local/bin:$PATH
 # rbenv の初期化
 eval "$(rbenv init - zsh)"
 eval "$(direnv hook zsh)"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+# mecab
+export MECAB_PATH=/usr/local/Cellar/mecab/0.996/lib/libmecab.dylib
+
+# tmux
+export EDITOR='vim'
+export SHELL='zsh'
+source ~/.tmuxinator/tmuxinator.zsh
 
 autoload -Uz compinit
 compinit
@@ -31,7 +40,7 @@ alias jmeter='java -jar $JMETER_HOME/bin/ApacheJMeter.jar'
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/bin
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+export PATH="$HOME/.cargo/bin:$PATH"
 
 function p() { peco | while read LINE; do $@ $LINE; done }
 alias e='ghq list -p | p cd'
@@ -41,6 +50,9 @@ export ETCDCTL_PATH=$HOME/.ghq/github.com/coreos/etcdctl/bin
 export PATH=$PATH:$ETCDCTL_PATH
 
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+
+# source ~/.bin/tmuxinator.zsh
+
 #########
 # alias
 #########
@@ -65,13 +77,15 @@ alias tml='tmux list-sessions'
 
 
 # Bundler Commands
-alias b="bundle"
+alias b="bundle install -j4"
 alias bi="b install"
 alias be="bundle exec"
 alias bl="bundle list"
 alias bu="bundle update"
 alias bp="bundle package"
 
-
+alias rs="spring rspec"
+alias rk="spring rake"
+alias rl="spring rails"
 
 alias hubb="hub browse"

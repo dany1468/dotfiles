@@ -38,3 +38,6 @@ bind -r UP resize-pane -U 5
 bind -r DOWN resize-pane -D 5
 bind -r LEFT resize-pane -L 5
 bind -r RIGHT resize-pane -R 5
+
+bind ^b select-layout even-horizontal
+bind ^v select-layout even-vertical

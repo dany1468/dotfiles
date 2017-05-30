@@ -1,5 +1,7 @@
 colorscheme delek
 
+set textwidth=0
+
 let mapleader = ","
 noremap \ ,
 

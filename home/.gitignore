@@ -5,3 +5,4 @@
 log/
 .env
 .p12
+.rbenv-gemsets
